@@ -1,6 +1,6 @@
 # League Apps Project/Test
 
-Using League App's Public API. Basic architecture structure taken from react-create-app and personalized.
+Using League App's Public API. Basic architecture taken from react-create-app.
 
 ---
 
