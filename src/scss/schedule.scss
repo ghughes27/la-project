@@ -1,0 +1,80 @@
+// main: ../main.scss
+
+.schedule-page {
+  clear: both;
+  padding: 20px 0 50px 0;
+  margin-bottom: 10px;
+}
+
+.table-caption {
+  background: #fff;
+  color: #2b2c2d;
+  font-size: 16px;
+  font-weight: 600;
+  height: 44px;
+  line-height: 2.8;
+  position: relative;
+  text-align: left;
+  text-transform: capitalize;
+
+  table {
+    border-top: 1px #dcdddf solid;
+  }
+}
+
+table {
+
+  th {
+    border-top: 1px #c4c4c4;
+    color: #1d1e1f;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0 4px;
+    position: relative;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  tr {
+    border-top: 1px solid #c4c4c4;
+  }
+}
+
+.schedule-table {
+  color: #6c6d6f;
+  position: relative;
+  width: 100%;
+
+  &.align-left {
+    text-align: left;
+
+    tr {
+      text-align: left;
+    }
+  }
+
+  th {
+    width: 140px;
+  }
+
+  td {
+    padding: 1px 4px 0 4px;
+
+    .home-wrapper {
+      display: table;
+      vertical-align: middle;
+
+      &:before {
+        content: attr(data-home-text);
+        display: table-cell;
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+}
+
+// workaround table not being grouped by uniqueDay
+.schedule-container:nth-of-type(odd) tr > td {
+  background: rgba(0, 0, 0, 0.05);
+}
+

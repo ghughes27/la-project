@@ -1,0 +1,60 @@
+// main: ../main.scss
+
+nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background-color: #212a31;
+  justify-content: flex-end;
+  line-height: 65px;
+  margin: 0;
+  list-style: none;
+  z-index: 100;
+
+  @media screen and (max-width: 800) {
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  li {
+
+    @media screen and (min-width: 800px) {
+      width: 130px;
+    }
+
+    &:first-child {
+      background-color: darken(rgb(32, 41, 48), 4%);
+    }
+
+    &:last-child {
+      margin: 0 30px 0 0;
+
+      @media screen and (max-width: 800px) {
+        margin: 0;
+      }
+    }
+
+    &:hover {
+      background-color: darken(rgb(32, 41, 48), 10%);
+    }
+  }
+
+  a {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+
+    @media screen and (max-width: 600px) {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+  }
+}
